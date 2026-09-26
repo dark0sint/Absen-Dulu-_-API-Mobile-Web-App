@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Absen Dulu</title>
+<meta name="theme-color" content="#0F6E5C">
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/icons/icon-192.png">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div id="authScreen" class="auth-wrap hidden">
+  <div class="auth-card">
+    <h1 style="margin:0 0 4px;font-size:22px;font-weight:800;color:var(--primary-dark);">Absen Dulu</h1>
+    <div class="muted" style="margin-bottom:16px;">Absensi karyawan berbasis GPS &amp; selfie</div>
+    <div class="auth-tabs">
+      <button id="tabLogin" class="active">Masuk</button>
+      <button id="tabRegister">Daftar</button>
+    </div>
+    <div id="registerFields" class="hidden">
+      <label>Nama Lengkap</label><input id="regName" placeholder="Nama Anda">
+    </div>
+    <label>Email</label><input id="authEmail" type="email" placeholder="nama@perusahaan.com">
+    <label>Password</label><input id="authPassword" type="password" placeholder="Minimal 6 karakter">
+    <div id="authMsg" class="err"></div>
+    <button class="btn btn-primary" id="authSubmit" style="margin-top:16px;">Masuk</button>
+    <div class="muted" style="margin-top:12px;text-align:center;">Pendaftar pertama otomatis menjadi Admin/HR.</div>
+  </div>
+</div>
+
+<div id="frame" class="hidden">
+  <header class="top">
+    <div class="row">
+      <div>
+        <h1>Absen Dulu</h1>
+        <div class="sub" id="hdrSub">Memuat...</div>
+      </div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:6px;">
+        <div class="badge" id="roleBadge">-</div>
+        <button id="logoutBtn" class="badge" style="border:none;cursor:pointer;">Keluar</button>
+      </div>
+    </div>
+  </header>
+  <main id="main"><div class="card">Menyiapkan aplikasi...</div></main>
+  <nav class="bottom"><div class="inner" id="navInner"></div></nav>
+</div>
+
+<script src="/app.js"></script>
+</body>
+</html>
