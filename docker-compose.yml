@@ -1,0 +1,19 @@
+services:
+  absen-dulu:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - JWT_SECRET=${JWT_SECRET:-ganti-kunci-rahasia-ini}
+      - DB_PATH=/app/data/absendulu.db
+      - UPLOAD_DIR=/app/uploads
+      - CORS_ORIGIN=${CORS_ORIGIN:-*}
+    volumes:
+      - ad_data:/app/data
+      - ad_uploads:/app/uploads
+
+volumes:
+  ad_data:
+  ad_uploads:
