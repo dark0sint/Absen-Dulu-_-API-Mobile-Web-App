@@ -1,0 +1,5 @@
+PORT=3000
+JWT_SECRET=ganti-dengan-kunci-rahasia-yang-panjang-dan-acak
+DB_PATH=./data/absendulu.db
+UPLOAD_DIR=./uploads
+CORS_ORIGIN=*
